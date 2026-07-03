@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gracias · XV de Selena</title>
+  <meta property="og:title" content="¡Gracias a todos! · XV de Selena" />
+  <meta property="og:description" content="Mercado Pago me limitó... pero siempre hay un plan B 😏" />
+  <meta property="og:image" content="preview.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="preview.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --celeste: #5BB5E5;
+      --celeste-mid: #3A96CC;
+      --celeste-dark: #1A5C8A;
+      --white: #FFFFFF;
+      --gold-accent: #F5C518;
+      --text-dark: #0d2233;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Nunito', sans-serif;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+      position: relative;
+      background: repeating-linear-gradient(
+        to right,
+        var(--celeste) 0px,
+        var(--celeste) 60px,
+        #ffffff 60px,
+        #ffffff 90px
+      );
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26,92,138,0.82) 0%, rgba(58,150,204,0.75) 60%, rgba(26,92,138,0.88) 100%);
+      z-index: 0;
+    }
+
+    .flags-top, .flags-bottom {
+      position: relative;
+      z-index: 1;
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+      margin: 0.5rem 0;
+      user-select: none;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.13);
+      backdrop-filter: blur(12px);
+      border: 2px solid rgba(255,255,255,0.45);
+      border-radius: 24px;
+      max-width: 460px;
+      width: 100%;
+      padding: 2.4rem 2rem;
+      text-align: center;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.30);
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--gold-accent);
+      color: var(--text-dark);
+      font-weight: 800;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 9vw, 3.4rem);
+      letter-spacing: 0.06em;
+      line-height: 1.05;
+      margin-bottom: 0.2rem;
+      color: var(--white);
+      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      font-weight: 600;
+      opacity: 0.8;
+      margin-bottom: 1.8rem;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      margin: 1.4rem 0;
+    }
+
+    .mensaje {
+      background: rgba(255,255,255,0.14);
+      border-left: 4px solid rgba(255,255,255,0.7);
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .mp-box {
+      background: rgba(255,255,255,0.18);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+      text-align: left;
+    }
+
+    .mp-box .mp-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .mp-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .mp-row span:first-child {
+      opacity: 0.65;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .mp-row span:last-child {
+      font-weight: 800;
+    }
+
+    .btn-alias {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 0.9rem;
+      background: var(--white);
+      color: var(--celeste-dark);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-alias:active {
+      transform: scale(0.97);
+    }
+
+    .btn-alias.copied {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .footer {
+      margin-top: 1.4rem;
+      font-size: 0.8rem;
+      opacity: 0.55;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flags-top">🇦🇷 🇦🇷 🇦🇷 🇦🇷 🇦🇷</div>
+
+  <div class="card">
+    <div class="badge">💙 Mensaje de Selena</div>
+
+    <h1>¡Gracias a todos!</h1>
+    <p class="subtitle">XV de Selena · 3 de julio de 2026</p>
+
+    <hr class="divider" />
+
+    <div class="mensaje">
+      😀 Gracias a todos los que me están depositando por mi cumpleaños...<br/><br/>
+      Mercado Pago me limitó el máximo de ingresos por ser menor de edad. 😅<br/><br/>
+      Pero <strong>siempre hay un plan B</strong> 😏 Les paso el alias de mamá.<br/><br/>
+      ¡Nuevamente gracias! 🎉
+    </div>
+
+    <div class="mp-box">
+      <div class="mp-label">💳 Datos Mercado Pago</div>
+      <div class="mp-row"><span>Alias</span><span>familiaviajesamor</span></div>
+      <div class="mp-row"><span>CVU</span><span style="font-size:0.78rem;">0000003100066590407410</span></div>
+      <div class="mp-row"><span>Nombre</span><span>Paola Nadina Chyt</span></div>
+    </div>
+
+    <button class="btn-alias" id="btnCopy" onclick="copyAlias()">
+      📋 Copiar alias
+    </button>
+
+    <p class="footer">Con amor · Selena 🤍</p>
+  </div>
+
+  <div class="flags-bottom">🇦🇷 🇦🇷 🇦🇷 🇦🇷 🇦🇷</div>
+
+  <script>
+    function copyAlias() {
+      navigator.clipboard.writeText('familiaviajesamor').then(() => {
+        const btn = document.getElementById('btnCopy');
+        btn.textContent = '✅ ¡Alias copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = '📋 Copiar alias';
+          btn.classList.remove('copied');
+        }, 2500);
+      });
+    }
+  </script>
+</body>
+</html>
